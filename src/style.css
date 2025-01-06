@@ -25,25 +25,26 @@ body {
     bottom: 20px;
     right: 20px;
     font-size: 75px;
+    transform: rotate(180deg);
   }
   &.spade:before,
   &.spade:after {
-    content: "\2660";
-    color: blackk;
+    content: "♠";
+    color: black;
   }
   &.club:before,
   &.club:after {
-    content: "\2663";
+    content: "♣";
     color: black;
   }
   &.heart:before,
   &.heart:after {
-    content: "\2665";
+    content: "♥";
     color: red;
   }
   &.diamond:before,
   &.diamond:after {
-    content: "\2666";
+    content: "♦";
     color: red;
   }
 }
