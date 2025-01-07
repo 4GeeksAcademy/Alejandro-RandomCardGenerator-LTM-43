@@ -7,10 +7,15 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
+  tirarCartas();
+};
+window.tirarCartas = function() {
+  document
+    .querySelector(".card")
+    .classList.remove("heart", "club", "diamond", "spade");
   document.querySelector(".card").classList.add(generateRandomSuit());
   document.querySelector(".card").innerHTML = generateRandomNumber();
 };
-
 function generateRandomNumber() {
   let numbers = [
     "A",
