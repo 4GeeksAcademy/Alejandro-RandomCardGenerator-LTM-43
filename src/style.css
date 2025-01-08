@@ -14,6 +14,7 @@ body {
   padding-top: 180px;
   position: relative;
   font-size: 75px;
+
   &:before {
     position: absolute;
     top: 20px;
@@ -27,24 +28,52 @@ body {
     font-size: 75px;
     transform: rotate(180deg);
   }
-  &.spade:before,
-  &.spade:after {
-    content: "♠";
+  &.spade,
+  &.club {
     color: black;
+    & > span {
+      color: black;
+    }
   }
-  &.club:before,
-  &.club:after {
-    content: "♣";
-    color: black;
+  &.spade {
+    &:before,
+    &:after {
+      content: "♠";
+    }
   }
-  &.heart:before,
-  &.heart:after {
-    content: "♥";
+  &.club {
+    &:before,
+    &:after {
+      content: "♣";
+    }
+  }
+
+  &.heart,
+  &.diamond {
     color: red;
+    & > span {
+      color: red;
+    }
   }
-  &.diamond:before,
-  &.diamond:after {
-    content: "♦";
-    color: red;
+  &.heart {
+    &:before,
+    &:after {
+      content: "♥";
+    }
   }
+  &.diamond {
+    &:before,
+    &:after {
+      content: "♦";
+    }
+  }
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

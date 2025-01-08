@@ -40,3 +40,9 @@ function generateRandomSuit() {
   let indexSuit = Math.floor(Math.random() * suit.length);
   return suit[indexSuit];
 }
+//kalkkajk
+
+const intervalID = setInterval(myCallback, 10000);
+function myCallback() {
+  tirarCartas();
+}
